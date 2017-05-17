@@ -1,0 +1,3 @@
+pywebview[cocoa]
+flask
+flask-wtf
