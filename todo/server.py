@@ -27,16 +27,50 @@ def index():
     """
     return render_template('index.html')
 
+@server.route('/slide2')
+def slide2():
+    """
+    Render the slide2.html file
 
-@server.route('/sayhi', methods=['GET', 'POST'])
-def say_hi():
-    form = HelloForm()
-    name = 'Guest'
-    if form.validate_on_submit():
-        name = form.name.data
-        form.name.data = ''
-    return render_template('hello.html', name=name, form=form)
+    :return: obj - renders slide 2 
+    """
+    return render_template('slide2.html')
 
+@server.route('/slide3')
+def slide3():
+    """
+    Render the slide3.html file
+
+    :return: obj - renders slide 3 
+    """
+    return render_template('slide3.html')
+
+@server.route('/slide4')
+def slide4():
+    """
+    Render the slide4.html file
+
+    :return: obj - renders slide 4
+    """
+    return render_template('slide4.html')
+
+@server.route('/slide5')
+def slide5():
+    """
+    Render the slide5.html file
+
+    :return: obj - renders slide 5
+    """
+    return render_template('slide5.html')
+
+@server.route('/slide6')
+def slide6():
+    """
+    Render the slide6.html file
+
+    :return: obj - renders slide 6
+    """
+    return render_template('slide6.html')
 
 def run_server():
     server.run(host='127.0.0.1', port=8088, threaded=True)

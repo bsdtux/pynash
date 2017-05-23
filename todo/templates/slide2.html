@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Slide2 - PyNash{% endblock %} 
+{% block content %}
+    <header>
+        <h1>Biggest Challenges for desktop Apps?</h1>
+    </header>
+    <main>
+        <ul>
+            <li>Knowing the gui libraries</li>
+            <li>Lots of coding to get a simple window to appear</li>
+            <li>Different skill set</li>
+        </ul>
+    </main>
+    <footer>
+        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename="images/left-icon.png") }}" /></a>
+        <a href="{{ url_for('slide3') }}"><img src="{{ url_for('static', filename="images/right-icon.png") }}" /></a>
+    </footer>
+{% endblock %}

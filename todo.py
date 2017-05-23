@@ -1,9 +1,8 @@
 import webview
-from threading import Thread, Lock
+from threading import Thread
 import logging
 from todo.server import run_server
 
-server_lock = Lock()
 logger = logging.getLogger(__name__)
 
 if __name__ == '__main__':

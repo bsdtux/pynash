@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Slide2 - PyNash{% endblock %} 
+{% block content %}
+    <header>
+        <h1>AAAAAAHHHHH?</h1>
+    </header>
+    <main>
+        <img src="{{url_for('static', filename='images/homealone.jpg') }}" />
+    </main>
+    <footer>
+        <a href="{{ url_for('slide2') }}"><img src="{{ url_for('static', filename="images/left-icon.png") }}" /></a>
+        <a href="{{ url_for('slide4') }}"><img src="{{ url_for('static', filename="images/right-icon.png") }}" /></a>
+    </footer>
+{% endblock %}

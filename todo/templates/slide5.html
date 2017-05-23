@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Slide2 - PyNash{% endblock %} 
+{% block content %}
+    <header>
+        <h1>Pywebview dependencies</h1>
+    </header>
+    <main>
+        <ul>
+            <li><a href="https://github.com/r0x0r/pywebview">pywebview</a></li>
+            <li>
+                Windows - Winforms or Pywin32 comtypes
+                <code>
+                    pip install pywebview[winforms]
+                </code>
+            </li>
+            <li>
+                Mac OS X - Cocoa or QT5
+                <code>
+                    pip install pywebview[cocoa]
+                </code>
+            </li>
+            <li>
+                Linux - gtk3 or qt4/5
+                <code>
+                    pip install pywebview[gtk3]
+                </code>
+                or
+                <code>
+                    pip install pywebview[qt5]
+                </code>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <a href="{{ url_for('slide4') }}"><img src="{{ url_for('static', filename="images/left-icon.png") }}" /></a>
+        <a href="{{ url_for('slide6') }}"><img src="{{ url_for('static', filename="images/right-icon.png") }}" /></a>
+    </footer>
+{% endblock %} 

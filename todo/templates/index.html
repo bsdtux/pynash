@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My First Webview</title>
-</head>
-<body>
-    <h1>Python Webview In Action</h1>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('say_hi') }}">Say Hi</a></li>
-        </ul>
-    </nav>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Intro - PyNash{% endblock %} 
+{% block content %}
+    <header>
+        <h1>PyWebView</h1>
+    </header>
+    <main>
+        <p>By Josh Stephens <br />
+        me@joshstephens.io <br />
+        @tuxbsd</p>
+    </main>
+    <footer>
+        <a href="{{ url_for('slide2') }}"><img src="{{ url_for('static', filename="images/right-icon.png") }}" /></a>
+    </footer>
+{% endblock %}
