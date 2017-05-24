@@ -2,14 +2,41 @@
 {% block title %}Slide2 - PyNash{% endblock %} 
 {% block content %}
     <header>
-        <h1>Biggest Challenges for desktop Apps?</h1>
+        <h1>Did someone say desktop app?</h1>
     </header>
     <main>
         <ul>
-            <li>Knowing the gui libraries</li>
-            <li>Lots of coding to get a simple window to appear</li>
+            <li>Which OS are we going to support?</li>
+            <li>Are we going to use tkinter or the native gui frameworks</li>
+            <li>Little extra coding for desktop interfaces</li>
             <li>Different skill set</li>
         </ul>
+        <code>
+        <pre>
+        from tkinter import Tk, Label, Button
+
+        class MyFirstGUI:
+            def __init__(self, master):
+                self.master = master
+                master.title("A simple GUI")
+
+                self.label = Label(master, text="This is our first GUI!")
+                self.label.pack()
+
+                self.greet_button = Button(master, text="Greet", command=self.greet)
+                self.greet_button.pack()
+
+                self.close_button = Button(master, text="Close", command=master.quit)
+                self.close_button.pack()
+
+            def greet(self):
+                print("Greetings!")
+
+        root = Tk()
+        my_gui = MyFirstGUI(root)
+        root.mainloop()
+        </pre>
+        </code>
     </main>
     <footer>
         <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename="images/left-icon.png") }}" /></a>

@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <title>{% block title%}{% endblock %}</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}" />
+        {% block scripts %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}" />
+        {% endblock %}
     </head>
     <body>
         <div class="wrapper">

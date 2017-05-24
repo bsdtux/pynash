@@ -2,12 +2,14 @@
 {% block title %}Intro - PyNash{% endblock %} 
 {% block content %}
     <header>
-        <h1>PyWebView</h1>
+        <h1>Pywebview</h1>
     </header>
-    <main>
-        <p>By Josh Stephens <br />
-        me@joshstephens.io <br />
-        @tuxbsd</p>
+    <main class='intro'>
+        <ul>
+            <li>By Josh Stephens</li>
+            <li>https://github.com/bsdtux/pynash</li>
+            <li>me@joshstephens.io</li>
+            <li>@tuxbsd</li>
     </main>
     <footer>
         <a href="{{ url_for('slide2') }}"><img src="{{ url_for('static', filename="images/right-icon.png") }}" /></a>
