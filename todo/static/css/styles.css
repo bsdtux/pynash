@@ -32,6 +32,11 @@ a {
 
 .wrapper {
     margin: 0 35px;
+    font-size: 1.25em;
+}
+
+.wrapper ul li {
+    font-size: 1.25em;
 }
 
 .wrapper  main img {
@@ -57,6 +62,7 @@ footer img {
 code {
     display: block;
     margin: 15px 0 15px 20px;
+    font-size: 1.15em;
 }
 
 code span {

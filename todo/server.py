@@ -72,6 +72,15 @@ def slide6():
     """
     return render_template('slide6.html')
 
+@server.route('/slide7')
+def slide7():
+    """
+    Render the slide7.html file
+
+    :return: obj - renders slide 7
+    """
+    return render_template('slide7.html')
+
 def run_server():
     server.run(host='127.0.0.1', port=8088, threaded=True)
 

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Slide2 - PyNash{% endblock %} 
+{% block content %}
+    <header>
+        <h1>How about an example</h1>
+    </header>
+    <main>
+    <code>
+    <pre>
+    from flask import Flask, render_template
+    import webview
+    import threading
+    
+    app = Flask(__name__)
+    
+    
+    @app.route('/')
+    def hello_world():
+        return render_template('hello.html')
+    
+    def start_server():
+        app.run()
+    
+    if __name__ == '__main__':
+        """  https://github.com/r0x0r/pywebview/blob/master/examples/http_server.py
+        """
+    
+        t = threading.Thread(target=start_server)
+        t.daemon = True
+        t.start()
+    
+        webview.create_window("Window Title", "http://127.0.0.1:5000/")
+    </pre>
+    </code>
+    </main>
+    <footer>
+        <a href="{{ url_for('slide6') }}"><img src="{{ url_for('static', filename="images/left-icon.png") }}" /></a>
+    </footer>
+{% endblock %} 
